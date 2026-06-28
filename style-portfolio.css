@@ -1,0 +1,122 @@
+/* Portfolio Page */
+.portfolio-page{
+    padding:100px 0 120px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.portfolio-card{
+    background:#fff;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 25px 40px rgba(15,23,42,0.06);
+    transition:transform .3s ease, box-shadow .3s ease;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+}
+
+.portfolio-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 35px 50px rgba(15,23,42,0.1);
+}
+
+.portfolio-image{
+    width:100%;
+    height:260px;
+    background:#f8fafc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.portfolio-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.portfolio-content{
+    padding:32px 28px;
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.portfolio-tag{
+    display:inline-block;
+    font-size:0.75rem;
+    font-weight:700;
+    color:#2563eb;
+    background:#eff6ff;
+    padding:6px 12px;
+    border-radius:6px;
+    margin-bottom:16px;
+    width:fit-content;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+}
+
+.portfolio-card h3{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:12px;
+    line-height:1.3;
+}
+
+.portfolio-card p{
+    color:#4b5563;
+    font-size:0.95rem;
+    line-height:1.6;
+    margin-bottom:24px;
+    flex-grow:1;
+}
+
+.portfolio-link{
+    display:inline-block;
+    color:#2563eb;
+    font-weight:700;
+    text-decoration:none;
+    border:2px solid #2563eb;
+    padding:12px 24px;
+    border-radius:12px;
+    text-align:center;
+    transition:all .3s ease;
+    align-self:flex-start;
+    width:100%;
+}
+
+.portfolio-link:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* Responsive */
+@media(max-width:992px){
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+}
+
+@media(max-width:576px){
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+    
+    .portfolio-page{
+        padding:60px 0 80px;
+    }
+    
+    .portfolio-card h3{
+        font-size:1.2rem;
+    }
+}

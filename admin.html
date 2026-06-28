@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - AaraTech</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style-common.css">
+    <link rel="stylesheet" href="style-admin.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="image1.png" alt="AaraTech Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard Section -->
+    <main class="admin-page container">
+        <header class="section-header reveal show">
+            <p class="section-subtitle">AARATECH MANAGEMENT</p>
+            <h1 class="section-title">Admin Dashboard</h1>
+            <p class="section-description">Monitor and process client queries and incoming career applications in real time.</p>
+        </header>
+
+        <!-- Stats Counter Panel -->
+        <section class="stats-grid reveal show">
+            <div class="stat-card">
+                <div class="stat-icon">✉️</div>
+                <div class="stat-info">
+                    <h3 id="stat-total-contacts">0</h3>
+                    <p>Total Contact Inquiries</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📄</div>
+                <div class="stat-info">
+                    <h3 id="stat-total-applications">0</h3>
+                    <p>Total Job Applications</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔔</div>
+                <div class="stat-info">
+                    <h3 id="stat-new-actions">0</h3>
+                    <p>New Unprocessed Items</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab Controls & Filter Panel -->
+        <div class="dashboard-controls reveal show">
+            <div class="tab-buttons">
+                <button class="tab-btn active" id="tab-contacts-btn" onclick="switchTab('contacts')">
+                    Inquiries (<span id="count-contacts">0</span>)
+                </button>
+                <button class="tab-btn" id="tab-applications-btn" onclick="switchTab('applications')">
+                    Applications (<span id="count-applications">0</span>)
+                </button>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="filters-panel">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search by name, email or keyword..." oninput="applyFilters()">
+                </div>
+                
+                <div class="filter-dropdowns">
+                    <!-- Status Filter -->
+                    <select id="filter-status" onchange="applyFilters()">
+                        <option value="">All Statuses</option>
+                        <!-- Populated dynamically based on active tab -->
+                    </select>
+
+                    <!-- Role Filter (Only visible for Applications tab) -->
+                    <select id="filter-role" style="display: none;" onchange="applyFilters()">
+                        <option value="">All Roles</option>
+                        <option value="software-engineer">Software Engineer</option>
+                        <option value="flutter-developer">Senior Flutter Developer</option>
+                        <option value="full-stack-developer">Senior Full Stack Developer</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Content Grid -->
+        <section class="dashboard-content reveal show">
+            <!-- Contact Messages View -->
+            <div id="contacts-view" class="view-panel active">
+                <div class="cards-grid" id="contacts-grid">
+                    <!-- Dynamic Contact Cards go here -->
+                    <div class="loading-spinner">Loading inquiries...</div>
+                </div>
+            </div>
+
+            <!-- Job Applications View -->
+            <div id="applications-view" class="view-panel">
+                <div class="cards-grid" id="applications-grid">
+                    <!-- Dynamic Application Cards go here -->
+                    <div class="loading-spinner">Loading applications...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Delete Confirmation Modal (Optional but nice) -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <h3>Confirm Delete</h3>
+            <p>Are you sure you want to permanently delete this submission? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button class="btn btn-outline btn-small" onclick="closeDeleteModal()">Cancel</button>
+                <button class="btn btn-danger btn-small" id="confirm-delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+</html>

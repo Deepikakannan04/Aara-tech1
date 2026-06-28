@@ -1,0 +1,117 @@
+/* Industries Page */
+.industries{
+    padding:100px 0 120px;
+}
+
+.industries-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.industry-card{
+    background:#fff;
+    border-radius:28px;
+    padding:40px 32px;
+    box-shadow:0 25px 40px rgba(15,23,42,0.06);
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    border:2px solid transparent;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.industry-card:hover,
+.industry-card:focus-visible,
+.industry-card:active{
+    transform:translateY(-8px);
+    box-shadow:0 35px 50px rgba(15,23,42,0.1);
+    border-color:#2563eb;
+}
+
+.industry-icon{
+    width:80px;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:20px;
+    background:linear-gradient(135deg,#dbeafe,#e0f2fe);
+    font-size:2.5rem;
+    margin-bottom:24px;
+    transition:background .3s ease;
+}
+
+.industry-card:hover .industry-icon{
+    background:linear-gradient(135deg,#b3d9ff,#7dd3ff);
+}
+
+.industry-card h3{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:16px;
+}
+
+.industry-card p{
+    color:#4b5563;
+    line-height:1.8;
+    margin-bottom:24px;
+    flex-grow:1;
+}
+
+.industry-features{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid #e5e7eb;
+}
+
+.industry-features li{
+    color:#2563eb;
+    font-weight:600;
+    font-size:0.95rem;
+    display:flex;
+    align-items:center;
+}
+
+.industry-features li::before{
+    content:"✓";
+    margin-right:10px;
+    font-weight:700;
+}
+
+/* Responsive */
+@media(max-width:992px){
+    .industries-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+}
+
+@media(max-width:576px){
+    .industries-grid{
+        grid-template-columns:1fr;
+    }
+    
+    .section-title{
+        font-size:2rem;
+    }
+    
+    .section-description{
+        font-size:1rem;
+    }
+    
+    .industries{
+        padding:60px 0 80px;
+    }
+    
+    .industries{
+        padding:60px 0 80px;
+    }
+}

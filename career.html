@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | AaraTech</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style-common.css">
+    <link rel="stylesheet" href="style-career.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="image1.png" alt="AaraTech Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="career.html" class="active">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Career Hero Section -->
+    <section class="career-hero reveal">
+        <div class="container">
+            <div class="career-hero-content">
+                <h1 class="section-title">Join Our Team</h1>
+                <p class="section-description">
+                    Be part of a forward-thinking team that's revolutionizing digital solutions. 
+                    We're looking for talented individuals to help us build the future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="open-positions reveal">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">OPEN ROLES</p>
+                <h2 class="section-title">We're Hiring</h2>
+            </div>
+
+            <div class="jobs-grid">
+                <article class="job-card reveal">
+                    <div class="job-header">
+                        <h3>Software Engineer</h3>
+                        <span class="job-location">Chennai</span>
+                    </div>
+                    <p class="job-type">0 - 2 Years • Full-time</p>
+                    <p class="job-description">
+                        We're seeking a Software Engineer with foundational coding skills and a passion for learning. 
+                        You'll work on building responsive, high-performance applications with mentorship from experienced developers.
+                    </p>
+                    <div class="job-skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                    <a href="#job-application" class="btn btn-primary btn-small">Apply Now</a>
+                </article>
+
+                <article class="job-card reveal">
+                    <div class="job-header">
+                        <h3>Senior Software Engineer - Flutter Developer</h3>
+                        <span class="job-location">Chennai</span>
+                    </div>
+                    <p class="job-type">5 - 10 Years • Full-time</p>
+                    <p class="job-description">
+                        Looking for an experienced Flutter Developer to lead mobile app development initiatives. 
+                        Design and maintain scalable cross-platform mobile architectures using Flutter and Dart.
+                    </p>
+                    <div class="job-skills">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">Mobile Apps</span>
+                        <span class="skill-tag">Leadership</span>
+                    </div>
+                    <a href="#job-application" class="btn btn-primary btn-small">Apply Now</a>
+                </article>
+
+                <article class="job-card reveal">
+                    <div class="job-header">
+                        <h3>Senior Software Engineer - Full Stack Developer</h3>
+                        <span class="job-location">Chennai</span>
+                    </div>
+                    <p class="job-type">5 - 15 Years • Full-time</p>
+                    <p class="job-description">
+                        Seeking an experienced Full Stack Developer to architect and build end-to-end solutions. 
+                        Lead technical implementations across frontend, backend, and cloud infrastructure.
+                    </p>
+                    <div class="job-skills">
+                        <span class="skill-tag">Full Stack</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                    <a href="#job-application" class="btn btn-primary btn-small">Apply Now</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Application Section -->
+    <section id="job-application" class="application-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">APPLY NOW</p>
+                <h2 class="section-title">Submit Your Application</h2>
+                <p class="section-description">Fill out the form below to apply for any of our open roles. Attach your resume and tell us why you’re the right fit.</p>
+            </div>
+
+            <div class="application-wrapper">
+                <div class="application-form-wrapper">
+                    <form class="application-form">
+                        <div class="form-group">
+                            <label for="applicant-name">Full Name</label>
+                            <input type="text" id="applicant-name" name="applicant-name" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="applicant-email">Email Address</label>
+                                <input type="email" id="applicant-email" name="applicant-email" placeholder="you@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="applicant-phone">Phone Number</label>
+                                <input type="tel" id="applicant-phone" name="applicant-phone" placeholder="+91 98765 43210" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="desired-role">Desired Role</label>
+                                <select id="desired-role" name="desired-role" required>
+                                    <option value="">Choose a role</option>
+                                    <option value="software-engineer">Software Engineer</option>
+                                    <option value="flutter-developer">Senior Software Engineer - Flutter Developer</option>
+                                    <option value="full-stack-developer">Senior Software Engineer - Full Stack Developer</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="experience">Years of Experience</label>
+                                <input type="text" id="experience" name="experience" placeholder="e.g. 3 Years" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resume">Upload Resume</label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cover-letter">Cover Letter</label>
+                            <textarea id="cover-letter" name="cover-letter" rows="6" placeholder="Tell us about your experience and why you’d be a great fit..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us Section -->
+    <section class="why-work reveal">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">OUR CULTURE</p>
+                <h2 class="section-title">Why Work With Us</h2>
+            </div>
+            
+            <div class="why-work-content">
+                <p class="why-work-intro">
+                    <strong>Translating people power to business power!</strong> Secure your future with us! Aara Tech believes in offering a democratic, result-based work environment. Our work style and the vision of leading every employee in this organization has created a dynamic atmosphere that invites you to grow, take up challenges, and makes you a proud partner in building a global player and leader.
+                </p>
+
+                <p class="why-work-text">
+                    To meet the increasing business demands of globalization, we recruit our professionals from around the world. But regardless of their country of origin, all Aara Tech employees share an unwavering commitment to getting the job done. "We have been able to achieve remarkable results with an outstanding team of professionals that are all focused on a shared and powerful vision."
+                </p>
+
+                <p class="why-work-text">
+                    Aara Tech strongly believes in giving back to society. Our service doesn't stop at providing charity. We have faith in human effort and we believe that it is not just what you do, but how you go about doing it. Aara Tech cares to bring together individuals with a common aim to serve society. Employees are the lifeblood of the organization, and we inculcate the sense of service in all our teams. Our ultimate aim is to harness our complete strength to contribute to the enlistment of the downtrodden in our society and empowerment of our rural masses.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="career-cta reveal">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Don't see the perfect role? Send us your resume and let's talk about opportunities.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
