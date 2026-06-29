@@ -1,4 +1,5 @@
 /* About Page */
+.about-page,
 .about{
     padding:100px 0 120px;
 }
@@ -211,11 +212,30 @@
 }
 
 @media(max-width:576px){
+    .about-page,
+    .about,
+    .team-section,
+    .timeline-section{
+        padding:60px 0 80px;
+    }
+
+    .about-lead{
+        font-size:1.15rem;
+    }
+
     .about-card{
         padding:24px;
     }
 
+    .about-card h3{
+        font-size:1.5rem;
+    }
+
     .team-grid{
         grid-template-columns:1fr;
+    }
+
+    .timeline-wrapper{
+        padding:0 0 0 40px;
     }
 }

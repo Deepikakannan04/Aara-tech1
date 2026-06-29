@@ -505,8 +505,17 @@
         font-size: 1.1rem;
     }
 
-    .offers-list li {
-        font-size: 0.9rem;
-        margin-bottom: 12px;
+@media (max-width: 576px) {
+    .application-section,
+    .why-work {
+        padding: 60px 0 80px;
+    }
+
+    .application-form-wrapper {
+        padding: 24px;
+    }
+
+    .application-form .btn {
+        width: 100%;
     }
 }

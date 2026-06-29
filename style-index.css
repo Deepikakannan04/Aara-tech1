@@ -190,7 +190,11 @@
     }
 
     .hero-content h1{
-        font-size:3.5rem;
+        font-size:2.8rem;
+    }
+
+    .hero-wrapper{
+        gap:40px;
     }
 
     .hero-buttons{
@@ -211,8 +215,13 @@
 }
 
 @media(max-width:576px){
+    .hero{
+        min-height:auto;
+        padding:40px 0 60px;
+    }
+
     .hero-content h1{
-        font-size:2.7rem;
+        font-size:2.2rem;
     }
 
     .hero-content p{
@@ -221,6 +230,16 @@
 
     .hero-buttons{
         flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-image{
+        margin-top:20px;
+    }
+
+    .services,
+    .testimonial{
+        padding:60px 0 80px;
     }
 
     .testimonial-card{
@@ -229,6 +248,14 @@
 
     .testimonial-title{
         font-size:2rem;
+    }
+
+    .testimonial-text{
+        font-size:1.05rem;
+    }
+
+    .testimonial-quote{
+        font-size:3.5rem;
     }
 }
 

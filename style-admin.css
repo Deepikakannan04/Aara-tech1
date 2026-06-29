@@ -504,3 +504,90 @@ body {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+@media (max-width: 992px) {
+    .dashboard-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .filters-panel {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .search-box {
+        min-width: 0;
+        max-width: none;
+    }
+
+    .filter-dropdowns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .filter-dropdowns select {
+        flex: 1;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-page {
+        padding-bottom: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-header {
+        flex-direction: column;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .status-change-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .status-select {
+        width: 100%;
+    }
+
+    .career-details {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 24px 20px;
+    }
+}

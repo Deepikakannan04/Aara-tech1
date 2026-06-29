@@ -24,9 +24,38 @@ function initScrollReveal() {
     revealElements.forEach(el => observer.observe(el));
 }
 
+function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (!navToggle || !navLinks) return;
+
+    const closeMenu = () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+    };
+
+    navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('active', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.classList.toggle('nav-open', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 992) closeMenu();
+    });
+}
+
 window.addEventListener('scroll', handleNavbarScroll);
 window.addEventListener('load', () => {
     handleNavbarScroll();
+    initMobileNav();
     initScrollReveal();
     initButtonPressEffects();
     initSiblingButtonEffect();
